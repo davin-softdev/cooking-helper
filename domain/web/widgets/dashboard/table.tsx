@@ -1,43 +1,28 @@
 'use client'
-import Loading from "@/app/loading";
-import { useEffect, useState } from "react";
-import axios from "axios"
-import { IUser } from "@/types/user";
+// Assuming this is in your Table component file
+import useFetchUsers from '@/hooks/user';
+import Loading from '@/app/loading';
 
 const Table = () => {
-    const [data, setData] = useState<IUser[]>([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | undefined>();
+  const { data, loading, error } = useFetchUsers();
 
-    useEffect(() => {
-        axios.get<IUser[]>("https://jsonplaceholder.typicode.com/users")
-             .then((res) => {
-                 setData(res.data);
-                 setLoading(false);
-             })
-             .catch((err) => {
-                 setError(err.message);
-                 setLoading(false);
-             });
-    }, []);
+  if (loading) {
+    return <Loading />;
+  }
 
-    if (loading) {
-        return <Loading />;
-    }
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
 
-    if (error) {
-        return <p>Error: {error}</p>;
-    }
+  return (
+    <div>
+      <div>
+        {data.map((user) => (
+          <p key={user.id}>{user.name}</p>
+        ))}
+      </div>
+    </div>
+  );
+};
 
-    return (
-        <div>
-            <div>
-                {data.map((user) => (
-                    <p key={user.id}>{user.name}</p>
-                ))}
-            </div>
-        </div>
-    );
-}
-
-export default Table
+export default Table;
