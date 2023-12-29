@@ -1,8 +1,7 @@
 import React, { Suspense } from 'react'
-import Loading from './loading';
-import Head from 'next/head';
+import Loading from './loading'
 
-const Table = React.lazy(() => import('@/widgets/dashboard/table'));
+const Table = React.lazy(() => import('@/widgets/dashboard/table'))
 
 const Page = () => {
     return (

@@ -1,3 +1,74 @@
 .home-container {
     padding: 20px 50px;
 }
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i');
+html,body{
+  margin:0;
+  height:120%;
+  font-family: 'Josefin Sans', sans-serif;
+
+}
+a{
+  text-decoration:none
+}
+
+.sides, .info{
+  flex: 0 0 auto;
+  width:50%
+}
+
+.sides:first-child{
+  padding: 20px 0px;
+  position: absolute;
+  left: 20px;
+
+  a {
+    &:first-child{
+      margin-right: 20px;
+    }
+  }
+}
+
+.info{
+  width:100%;
+  padding:15% 10% 0 10%;
+  text-align:center;
+  text-shadow:0 2px 3px rgba(0,0,0,0.2)
+}
+.author{
+  display:inline-block;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  background:url(https://scontent.fadl4-1.fna.fbcdn.net/v/t39.30808-6/400261537_3642701385954548_2071121124673227644_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=Fwpev1U-rdkAX8AS6oK&_nc_ht=scontent.fadl4-1.fna&oh=00_AfDP_U3uij3AORKKe7OLuS8Or9Q9R-AOH--0btY5Ezt6eQ&oe=65947D0E) center no-repeat;
+  background-size:cover;
+  box-shadow:0 2px 3px rgba(0,0,0,0.3);
+  margin-bottom:3px
+}
+.info h4, .meta{
+  font-size:0.7em
+}
+.meta{
+  font-style:italic;
+}
+@keyframes grow{
+  0% { transform: scale(1) translateY(0px)}
+  50% { transform: scale(1.2) translateY(-400px)}
+}
+.content{  
+  padding:5% 10%;
+  text-align:justify
+}
+.btn{
+  color:#333;
+  border:2px solid;
+  border-radius:3px;
+  text-decoration:none;
+  display:inline-block;
+  padding:5px 10px;
+  font-weight:600
+}
+
+.twtr{
+  margin-top:100px
+}.btn.twtr:after{content:"\1F426";padding-left:5px}
