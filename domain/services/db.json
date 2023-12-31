@@ -1,0 +1,43 @@
+{
+    "users": [
+        {
+            "id": "u001",
+            "name": "Davin Ly",
+            "email": "lythevinh002@gmail.com",
+            "phone": "0478646929",
+            "website": "I'm admin user",
+            "role": "Full Stack Developer",
+            "image": "",
+            "social_media": [
+                {
+                    "id": "s001",
+                    "name": "facebook",
+                    "url": "https://www.facebook.com/kuZinBeo"
+                }
+            ]
+        }
+    ],
+    "items": [
+        {
+            "id": "i001",
+            "name": "shrimp",
+            "images": [
+                ""
+            ],
+            "description": ""
+        }
+    ],
+    "recipes": [
+        {
+            "id": "r001",
+            "name": "Vietnamese Spring Rolls",
+            "images": [
+                "https://www.hungryhuy.com/wp-content/uploads/goi-cuon-viet-spring-rolls-680x1020@2x.jpg"
+            ],
+            "items": [
+
+            ],
+            "description": ""
+        }
+    ]
+}

@@ -1,12 +1,11 @@
 'use client'
 // Assuming this is in your Table component file
-import useFetchUsers from '@/hooks/user';
+import { UserServices } from '@/hooks/user';
 import Loading from '@/app/loading';
 import { IUser } from '@/types/user';
-import { useEffect } from 'react';
 
 const Table = () => {
-  const { data, loading, error } = useFetchUsers<IUser>({url: 'https://jsonplaceholder.typicode.com/users'})
+  const { data, loading, error } = UserServices.useFetchUsers<IUser>('http://localhost:8000/users')
 
   if (loading) {
     return <Loading />;
